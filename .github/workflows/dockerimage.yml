@@ -5,7 +5,6 @@ on: [push]
 jobs:
 
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -20,3 +19,8 @@ jobs:
         npm run build:prod
     - name: Build the Docker image
       run: docker build . --file DockerFile --tag rome:$(date +%s)
+    - name: Docker Login
+      uses: "actions/docker/login@master"
+      secrets: ["DOCKER_USERNAME", "DOCKER_PASSWORD"]
+    - name: Publish the Docker image
+      run: docker push polatengin/rome:$(date +%s)
