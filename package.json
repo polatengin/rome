@@ -6,8 +6,8 @@
   "scripts": {
     "build:dev": "webpack --mode development && postcss src/index.css > dist/bundle.css",
     "build:prod": "webpack --mode production && postcss src/index.css > dist/bundle.css",
-    "dev": "build:dev && serve ./dist/",
-    "prod": "build:prod && serve ./dist/"
+    "dev": "npm run build:dev && serve ./dist/",
+    "prod": "npm run build:prod && serve ./dist/"
   },
   "keywords": [],
   "author": "",
