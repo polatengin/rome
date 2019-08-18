@@ -9,6 +9,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
+    - name: Build the npm project
+      uses: actions/setup-node@v1
+      run: |
+        npm install
+        npm run prod
+
     - name: Build the Docker image
+    - uses: actions/checkout@v1
       run: docker build . --file DockerFile --tag rome:$(date +%s)
