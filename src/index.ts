@@ -1,42 +1,43 @@
 const windowWidth: number = window.innerWidth;
-const charWidth: number = 14;
+const charWidth: number = 16;
 const paddingWidth: number = charWidth * 2;
 
 const scene: HTMLDivElement = <HTMLDivElement>document.getElementById('scene');
 
-const columnCount: number = windowWidth/(charWidth+paddingWidth);
+const columnCount: number = windowWidth / (charWidth + paddingWidth);
 
 function createRunDownColumn(): HTMLDivElement {
-    const div = document.createElement('div');
-    div.className = 'column';
+  const div = document.createElement('div');
+  div.className = 'column';
 
-    scene.appendChild(div);
+  scene.appendChild(div);
 
-    return div;
+  return div;
 }
 
 function createRunDownAnimation(div: HTMLDivElement) {
-    setInterval(() => {
-        let randomCharacter = 32;
-        if (Math.random() > 0.45) {
-            randomCharacter = Math.floor(Math.random() * 25) + 97;
-        }
+  setInterval(() => {
+    let randomCharacter = 32;
+    if (Math.random() > 0.45) {
+      randomCharacter = Math.floor(Math.random() * 25) + 97;
+    }
 
-        const span = document.createElement('span');
-        span.style.opacity = (Math.random() * + 0.6) + '';
-        span.innerText = String.fromCharCode(randomCharacter);
+    const span = document.createElement('span');
+    span.style.opacity = (Math.random() + 0.2) + '';
+    span.innerText = String.fromCharCode(randomCharacter);
+    span.className = 'fall-down';
 
-        div.insertBefore(span, div.firstChild);
+    div.insertBefore(span, div.firstChild);
 
-        let spans = div.getElementsByTagName('span');
-        for (let index = spans.length - 1; index >= 20; index--) {
-            div.removeChild(spans[index]);
-        }
-    }, 60);
+    let spans = div.getElementsByTagName('span');
+    for (let index = spans.length - 1; index >= 20; index--) {
+      div.removeChild(spans[index]);
+    }
+  }, 200);
 }
 
 for (let index = 0; index < columnCount; index++) {
-    const div = createRunDownColumn();
+  const div = createRunDownColumn();
 
-    createRunDownAnimation(div);
+  createRunDownAnimation(div);
 }
