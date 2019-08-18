@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --mode development && postcss src/index.css > dist/bundle.css && serve ./dist/",
-    "prod": "webpack --mode production && postcss src/index.css > dist/bundle.css && serve ./dist/"
+    "build:dev": "webpack --mode development && postcss src/index.css > dist/bundle.css",
+    "build:prod": "webpack --mode production && postcss src/index.css > dist/bundle.css",
+    "dev": "build:dev && serve ./dist/",
+    "prod": "build:prod && serve ./dist/"
   },
   "keywords": [],
   "author": "",
