@@ -1,6 +1,6 @@
 workflow "Build and Publish" {
   on = "push"
-  resolves = ["Docker Registry"]
+  resolves = ["docker publish"]
 }
 
 action "npm install dependencies" {
