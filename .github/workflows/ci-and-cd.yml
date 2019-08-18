@@ -17,7 +17,7 @@ jobs:
     - name: docker build
       uses: actions/docker/cli@master
       with:
-        args: build -t rome:latest .
+        args: build -f DockerFile -t rome:latest .
     - name: docker tag
       uses: actions/docker/tag@master
       with:
