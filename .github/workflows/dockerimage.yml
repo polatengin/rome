@@ -17,6 +17,6 @@ jobs:
     - name: Build the npm project
       run: |
         npm install
-        npm run prod
+        npm run build:prod
     - name: Build the Docker image
       run: docker build . --file DockerFile --tag rome:$(date +%s)
