@@ -16,6 +16,7 @@ function createRunDownColumn(): HTMLDivElement {
 }
 
 function createRunDownAnimation(div: HTMLDivElement) {
+  const interval = (Math.random() * 10) + 200;
   setInterval(() => {
     let randomCharacter = 32;
     if (Math.random() > 0.45) {
@@ -37,7 +38,7 @@ function createRunDownAnimation(div: HTMLDivElement) {
     for (let index = spans.length - 1; index >= 20; index--) {
       div.removeChild(spans[index]);
     }
-  }, 200);
+  }, interval);
 }
 
 for (let index = 0; index < columnCount; index++) {
