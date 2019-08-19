@@ -27,6 +27,10 @@ function createRunDownAnimation(div: HTMLDivElement) {
     span.innerText = String.fromCharCode(randomCharacter);
     span.className = 'fall-down';
 
+    if (Math.random() > 0.85) {
+      span.classList.add('white');
+    }
+
     div.insertBefore(span, div.firstChild);
 
     let spans = div.getElementsByTagName('span');
