@@ -10,6 +10,8 @@ RUN npx webpack --mode production
 
 RUN npx postcss src/index.css > dist/bundle.css
 
+FROM nginx:1.17.0-alpine AS prod
+
 USER root
 
 MAINTAINER Engin Polat (polatengin) <engin@enginpolat.com>
