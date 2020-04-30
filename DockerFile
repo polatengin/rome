@@ -1,4 +1,4 @@
-FROM nginx:1.17.0-alpine
+FROM node:13.10.1-buster AS builder
 
 USER root
 
