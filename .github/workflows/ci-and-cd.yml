@@ -1,8 +1,8 @@
 on: push
-name: Build and Publish
+name: BuildAndPublish
 jobs:
-  npmInstallDependencies:
-    name: npm install dependencies
+  BuildAndPublish:
+    name: BuildAndPublish
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
