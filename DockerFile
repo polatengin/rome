@@ -4,6 +4,8 @@ WORKDIR /code
 
 COPY . .
 
+RUN npm install
+
 USER root
 
 MAINTAINER Engin Polat (polatengin) <engin@enginpolat.com>
