@@ -9,7 +9,7 @@
     "start": "npm run build:dev && serve ./dist/"
   },
   "keywords": [],
-  "author": "",
+  "author": "Engin Polat",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "13.13.4",
