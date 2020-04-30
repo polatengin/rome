@@ -2,7 +2,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/283de46b-13c3-4b86-92fe-2fa96057cf6c/deploy-status)](https://app.netlify.com/sites/polatengin-rome/deploys)
 
-[![GitHub Actions Status](https://github.com/polatengin/rome/workflows/Build%20and%20Publish/badge.svg)](https://github.com/polatengin/rome/workflows/ci-and-cd)
+[![GitHub Actions Status](https://github.com/polatengin/rome/workflows/BuildAndPublish/badge.svg)](https://github.com/polatengin/rome/workflows/ci-and-cd)
 
 [Türkçe açıklama](#tr)
 
