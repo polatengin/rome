@@ -14,9 +14,7 @@ FROM nginx:1.17.0-alpine AS prod
 
 USER root
 
-MAINTAINER Engin Polat (polatengin) <engin@enginpolat.com>
-
-COPY ./dist /usr/share/nginx/html
+COPY --from=builder /code/dist /usr/share/nginx/html
 
 RUN nginx
 
