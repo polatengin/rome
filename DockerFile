@@ -1,5 +1,9 @@
 FROM node:13.10.1-buster AS builder
 
+WORKDIR /code
+
+COPY . .
+
 USER root
 
 MAINTAINER Engin Polat (polatengin) <engin@enginpolat.com>
